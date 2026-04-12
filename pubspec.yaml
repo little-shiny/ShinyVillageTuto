@@ -1,0 +1,45 @@
+name: shint_village_tutorial
+description: Tutorial e instalación para Shint Village
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.0
+
+flutter:
+  uses-material-design: true
+  
+  # El desarrollador debe agregar aquí las capturas de pantalla del juego
+  assets:
+    - assets/tutorial/
+    - assets/icons/
+
+  # Fuente pixel art (opcional, se puede usar una fuente del sistema)
+  # fonts:
+  #   - family: PressStart2P
+  #     fonts:
+  #       - asset: assets/fonts/PressStart2P-Regular.ttf
+
+# Configuración del ícono de la app
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+
+# Configuración de la pantalla de splash
+flutter_native_splash:
+  color: "#D4B896"
+  image: "assets/icons/splash_logo.png"
+  android: true
+  ios: true

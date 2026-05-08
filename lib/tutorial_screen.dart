@@ -301,15 +301,13 @@ class _TutorialScreenState extends State<TutorialScreen>
   }
 
   Widget _buildPageContent(_TutorialPage page) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          _buildAnnotatedImage(page),
-          _buildStepDots(page),
-          _buildStepPanel(page),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Expanded(child: _buildAnnotatedImage(page)),
+        _buildStepDots(page),
+        _buildStepPanel(page),
+      ],
     );
   }
 
@@ -317,7 +315,7 @@ class _TutorialScreenState extends State<TutorialScreen>
     return LayoutBuilder(
       builder: (context, constraints) {
         final w = constraints.maxWidth;
-        final h = w * 9 / 16;
+        final h = constraints.maxHeight;
         return SizedBox(
           width: w,
           height: h,
